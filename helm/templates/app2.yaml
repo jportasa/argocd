@@ -14,3 +14,7 @@ spec:
     path: helm
     repoURL: https://github.com/vfarcic/devops-toolkit.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
+    helm:
+      values: |
+        image:
+          tag: latest
