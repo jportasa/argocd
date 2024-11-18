@@ -17,4 +17,4 @@ spec:
     helm:
       values: |
         image:
-          tag: latest
+          tag: 2.9.17
