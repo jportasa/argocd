@@ -17,4 +17,5 @@ spec:
     helm:
       values: |
         image:
-          tag: 2.9.17
+          tag: 2.9.16
+          repository: ghcr.io/jportasa/argocd/devops-toolkit-series
