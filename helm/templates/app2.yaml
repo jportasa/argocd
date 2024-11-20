@@ -6,9 +6,10 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   annotations:
-    argocd-image-updater.argoproj.io/image-list: ghcr.io/jportasa/argocd/devops-toolkit-series
+    argocd-image-updater.argoproj.io/image-list: ghcr.io/jportasa/devops-toolkit-series
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd:creds
     argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/pullsecret: argocd/ghcr-secret
 spec:
   destination:
     namespace: production
@@ -22,7 +23,7 @@ spec:
       values: |
         image:
           tag: 2.9.16
-          repository: ghcr.io/jportasa/argocd/devops-toolkit-series
+          repository: ghcr.io/jportasa/devops-toolkit-series
   syncPolicy:
     automated:
       prune: true
