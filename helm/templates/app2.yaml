@@ -19,3 +19,7 @@ spec:
         image:
           tag: 2.9.16
           repository: ghcr.io/jportasa/argocd/devops-toolkit-series
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
